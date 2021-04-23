@@ -100,16 +100,7 @@ if(strText==""||strText1==""||strText2==""||strText3==""||strText4==""||strText6
         console.log('error');
         }
         else{
-     var y = document.getElementById("ma");
-         y.style.display = "none";
-     var y = document.getElementById("a");
-        y.style.display = "none"; document.getElementById("ma1").style.backgroundColor = "green";
-   var l=document.getElementById("location-1").value;
-        var p=document.getElementById("location-2").value;
-       
-         document.getElementById("k").innerHTML = "Pickup Loaction :"+l+"<br\> Drop Loaction : "+p;
-         var elem = document.getElementById("myButton1");
-elem.value = "Confirm the Booking";
+     
     //create request
     var request = {
         origin: document.getElementById("location-1").value,
@@ -135,7 +126,15 @@ elem.value = "Confirm the Booking";
 		localStorage.setItem("rate3", suvo);
 		localStorage.setItem("rate4", suvr);
 		localStorage.setItem("rate5", traveller);
-           
+     var y = document.getElementById("ma");
+         y.style.display = "none";
+     document.getElementById("ma1").style.backgroundColor = "green";
+   var l=document.getElementById("location-1").value;
+        var p=document.getElementById("location-2").value;
+       
+         document.getElementById("k").innerHTML = "Pickup Loaction :"+l+"<br\> Drop Loaction : "+p;
+         var elem = document.getElementById("myButton1");
+elem.value = "Confirm the Booking";      
             $("#output1").html("<div class='meta-item;'>  <span> Distance: " + result.routes[0].legs[0].distance.text + "</span><br /><span> One Way : ₹" +sedano+"</span><br /><span> Round Way : ₹" +sedanr+"</span></div>");
             document.getElementById("output1").style.display = "block";
             $("#output2").html("<div class='meta-item;'>  <span> Distance: " + result.routes[0].legs[0].distance.text + "</span><br /><span> One Way : ₹" +suvo+"</span><br /><span> Round Way : ₹" +suvr+"</span></div>");
@@ -163,7 +162,7 @@ elem.value = "Confirm the Booking";
 
 }
 }
-// Clear results
+// Clear results 
 
 function clearRoute(){
     document.getElementById("output").style.display = "none";
